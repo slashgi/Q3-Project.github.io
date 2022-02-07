@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset= "utf-8">
+    <meta name= "viewport" content="width=device-width,  initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+<title> PSHS Knowledge Hub</title>
+<style>
+    ul {list-style-type: none;}
+body {font-family: Arial, Helvetica, sans-serif; background-color: lightblue}
+
+
+  div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+.top{
+    background-color: royalblue;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.title{
+    background-color: royalblue;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+img.avatar {
+  width: 22%;
+  border-radius: 20%;
+  
+}
+.unlisted {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: royalblue;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.month {
+  padding: 70px;
+  width: 100%;
+  background: royalblue;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: royalblue;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+.class1{
+      
+      border: 5px solid royalblue;
+      background-color: #d5e7f7;
+      font-family: ABeeZee;
+      
+      padding: 20px;
+      margin-left: auto;
+      margin-right: auto;
+
+      }
+      .class2{
+        border: 5px solid royalblue;
+      background-color: #d5e7f7;
+      font-family: ABeeZee;
+      float: left;
+   
+      padding: 20px;
+      margin-left: auto;
+      margin-right: 50%;
+      
+      }
+      .class3{
+        border-bottom: 1px solid royalblue;
+        border-left: 2px solid royalblue;
+        border-right: 2px solid royalblue;
+        border-top: 2px solid royalblue;
+      background-color: #d5e7f7;
+      font-family:ABeeZee;
+      float: right;
+      padding: 20px;
+      margin-left: 50%;
+      margin-right: auto;
+      }
+      .class4{
+        font-family:sans-serif;
+        font-size: 18px;
+      float: left;
+     
+      padding: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      
+      }
+      .class5{
+        font-family:sans-serif;
+        font-size: 18px;
+      float: left;
+     
+      padding: 20px;
+      margin-left: 50%;
+      margin-right: auto;
+      }
+     
+</style>
+</head>
+<body>
+
+    <h2 class="title" style="text-align: center;"> <br> <img src="pshs.png" alt="logo" class="avatar"> <br> PSHS-CLC</h2>
+    
+
+
+
+           <div style=" width: 70%" >
+            <ul class="unlisted">
+              <li><a class="active" href="#home">Home</a></li> 
+              <li><a href="#news">Recently Opened</a></li>
+              <li><a href="#contact">Grades</a></li>
+              <li><a href="#about">Calendar</a></li>
+              
+            </ul>
+     
+           </div>
+           <br>
+           <h2 class="title" style="text-align: center; height: 100px"><br>Courses</h2>  
+           <br>
+           <div style="display: table; text-align: center;"> 
+          
+            <div style="display: table-row;">
+              &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14; 
+              &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+              &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+              &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+           
+              &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+
+              <div class="card" style="width:400px; text-align: center; display: table-cell;">
+                <img class="card-img-top" src="background.jpeg" alt="Card image" style="width:100%">
+                
+                <div class="card-body">
+                  <a href="#" class="card-title" style="font-size: 30px; color: black; border-bottom: solid royalblue 2px; font-family: 'Poppins'">Subject</a>
+                  </div>
+                  </div>
+                  &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+
+                  <div class="card" style="width:400px; text-align: center; display: table-cell;">
+                    <img class="card-img-top" src="background.jpeg" alt="Card image" style="width:100%;font-family: 'Poppins'">
+                    
+                    <div class="card-body">
+                      <a href="#" class="card-title" style="font-size: 30px; color: black; border-bottom: solid royalblue 2px;font-family: 'Poppins'">Subject</a>
+                      </div>
+                      </div>
+                      &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+
+              <div class="card" style="width:400px; text-align: center; display: table-cell;">
+                <img class="card-img-top" src="background.jpeg" alt="Card image" style="width:100%; font-family: 'Poppins'">
+                
+                <div class="card-body">
+                  <a href="#" class="card-title" style="font-size: 30px; color: black; border-bottom: solid royalblue 2px; font-family: 'Poppins'">Subject</a>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <br>
+                  <div style="display: table-row;">
+                    &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14; 
+                    &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                    &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                    &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                 
+                    &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+      
+                    <div class="card" style="width:400px; text-align: center; display: table-cell; font-family: 'Poppins'">
+                      <img class="card-img-top" src="background.jpeg" alt="Card image" style="width:100%">
+                      
+                      <div class="card-body">
+                        <a href="#" class="card-title" style="font-size: 30px; color: black; border-bottom: solid royalblue 2px; font-family: 'Poppins'">Subject</a>
+                        </div>
+                        </div>
+                        &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+      
+                        <div class="card" style="width:400px; text-align: center; display: table-cell;">
+                          <img class="card-img-top" src="background.jpeg" alt="Card image" style="width:100%">
+                          
+                          <div class="card-body">
+                            <a href="#" class="card-title" style="font-size: 30px; color: black; border-bottom: solid royalblue 2px; font-family: 'Poppins'">Subject</a>
+                            </div>
+                            </div>
+                            &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+      
+                    <div class="card" style="width:400px; text-align: center; display: table-cell;">
+                      <img class="card-img-top" src="background.jpeg" alt="Card image" style="width:100%">
+                      
+                      <div class="card-body">
+                        <a href="#" class="card-title" style="font-size: 30px; color: black; border-bottom: solid royalblue 2px; font-family: 'Poppins'">Subject</a>
+                        </div>
+                        </div>
+                       
+                        </div>
+                        
+                        <br>
+            
+    </html>
