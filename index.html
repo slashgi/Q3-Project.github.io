@@ -54,7 +54,7 @@
             }
 
             function enterNumC(){
-                if( clickNum == 50){
+                if( clickNum == 10){
                     alert("You got the correct number!");
                     clickNum = 0;
                     score++;
@@ -101,11 +101,11 @@
         
         <style>
             h1{
-            font-family: Anton;
-            text-align: center;
-            font-size: 64px;
-            margin-left: 35%;
-            margin-right: 30%;
+                font-family: Anton;
+                text-align: center;
+                font-size: 64px;
+                margin-left: 35%;
+                margin-right: 30%;
             
 
                }
@@ -114,33 +114,69 @@
                    margin-right: 25%;
                }
                
-           body{
-               background-color:rgb(182, 209, 225);
+            body{
+                background-color:rgb(182, 209, 225);
            }
-           .clickbutton{
-                font-family: sans-serif;
-                color: white;
-             
+            .clickbutton {
+                display: inline-block;
+                padding: 15px 25px;
                 font-size: 80px;
-                border: 13px solid coral;
-                padding: 10px;
-                margin-left: 22%;
-                margin-right: 20%;
-
-                
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: #fff;
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
             }
-        
-            .checkbutton{
-                font-family: sans-serif;
-      
-             
-                font-size: 20px;
-                border: 13px solid coral;
-                padding: 10px;
-                margin-left: 48%;
-                margin-right: 20%;
 
-                
+            .clickbutton:hover {background-color: #3e8e41}
+
+            .clickbutton:active {
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .checkbutton {
+                display: inline-block;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 35px;
+                padding: 20px;
+                width: 200px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+            }
+
+            .checkbutton span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .checkbutton span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .checkbutton:hover span {
+                padding-right: 25px;
+            }
+
+            .checkbutton:hover span:after {
+                opacity: 1;
+                right: 0;
             }
 
             h2{
@@ -180,53 +216,54 @@
         <br>
         <br>
 
-        <h4>If Bobby has 6 buttons and Matthew has 2, how many buttons does Bobby have over Matthew? </h4>  
+        <h4>If Bobby has 6 coins and Matthew has 2, how many coins does Bobby have over Matthew? </h4>  
         <div>    
-        <button onclick="clickClack()" id="buttonA" class="clickbutton">.....CLICKED.....</button>
+        <button onclick="clickClack()" class="clickbutton">.....CLICKED.....</button>
         <br>
         <br>
-        <button onclick="enterNumA()" id="buttonA" class="checkbutton">CHECK</button>
+        <button onclick="enterNumA()" class="checkbutton">CHECK</button>
         <br>
         <br>
         </div>
       
         <h4>How many letters are there in the alphabet? </h4>
         <div>      
-        <button onclick="clickClack()" id="buttonB" class="clickbutton">.....CLICKED.....</button>
+        <button onclick="clickClack()" class="clickbutton">.....CLICKED.....</button>
         <br>
         <br>
-        <button onclick="enterNumB()"  id="buttonB" class="checkbutton">CHECK</button>
+        <button onclick="enterNumB()" class="checkbutton">CHECK</button>
         <br>
         <br>
     </div>
     
         <h4>Out of 50 people, 10 people loved Italian food, 20 loved Mexican food, and 20 loved Indian food, how many people like eating pizza? </h4> 
         <div>
-        <button onclick="clickClack()"  id="buttonC" class="clickbutton">.....CLICKED.....</button>
+        <button onclick="clickClack()" class="clickbutton">.....CLICKED.....</button>
         <br>
         <br>
-        <button onclick="enterNumC()"  id="buttonC" class="checkbutton">CHECK</button>
+        <button onclick="enterNumC()" class="checkbutton">CHECK</button>
         <br>
         <br>
     </div>
 
         <h4>How many days are there in 2 weeks? </h4>   
         <div>  
-        <button onclick="clickClack()"  id="buttonD" class="clickbutton">.....CLICKED.....</button>
+        <button onclick="clickClack()" class="clickbutton">.....CLICKED.....</button>
     
         <br>
         <br>
-        <button onclick="enterNumD()"  id="buttonD" class="checkbutton">CHECK</button>
+
+        <button onclick="enterNumD()" class="checkbutton">CHECK</button>
         <br>
         <br>
     </div>
 
         <h4>What is the square root of 400? </h4>  
         <div>
-        <button onclick="clickClack()"  id="buttonE" class="clickbutton">.....CLICKED.....</button>
+        <button onclick="clickClack()" class="clickbutton">.....CLICKED.....</button>
         <br>
         <br>
-        <button onclick="enterNumE()"  id="buttonE" class="checkbutton">CHECK</button>
+        <button onclick="enterNumE()" class="checkbutton">CHECK</button>
      
         <br><br>
     </div>
@@ -235,8 +272,7 @@
         <br>
         <p id="score"> </p>
         <h2> About Us</h2>
-        <p> You may be wondering? How do you win this game? Well simple. You are given 5 questions, you need to click as many times as the answer. For example, if the answer is 7, then you click 7 times. Answer the questions from top to bottom. This was inspired by Simon Says</p>
-        </p>
+        <p> You may be wondering? How do you win this game? Well simple. You are given 5 questions, you need to click as many times as the answer. For example, if the answer is 7, then you click 7 times. Answer the questions from top to bottom. This was inspired by Simon Says.</p>
     
     </body>
     </html>
